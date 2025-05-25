@@ -6,7 +6,9 @@ import rooms from "@/data/room"; // Adjust the path to your room data
 import BannerSection from "@/app/components/BannerSection";
 
 type RoomDetailsPageProps = {
-  params: { id: string };
+  params: {
+    id: string;
+  };
 };
 
 export default function RoomDetailsPage({ params }: RoomDetailsPageProps) {
