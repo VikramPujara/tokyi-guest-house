@@ -56,8 +56,12 @@ export default function BookingForm() {
       } else {
         setError("Failed to send booking request.");
       }
-    } catch (err: any) {
-      setError("Error sending request: " + (err.message || String(err)));
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setError("Error sending request: " + err.message);
+      } else {
+        setError("Error sending request: " + String(err));
+      }
     }
   };
 
