@@ -1,28 +1,19 @@
-// src/app/rooms/[id]/page.tsx
-
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import rooms from "@/data/room"; // Adjust the path to your room data
+import rooms from "@/data/room";
 import BannerSection from "@/app/components/BannerSection";
 
-// type PageProps = {
-//   params: {
-//     id: string;
-//   };
-// };
+type Props = {
+  params: {
+    id: string;
+  };
+};
 
-// export default function RoomDetailsPage({ params }: PageProps) {
-//   const room = rooms.find((r) => r.id.toString() === params.id);
-
-//   if (!room) return notFound();
-export default function RoomDetailsPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+export default function RoomDetailsPage({ params }: Props) {
   const room = rooms.find((r) => r.id.toString() === params.id);
 
   if (!room) return notFound();
+
   return (
     <>
       <BannerSection
@@ -49,4 +40,10 @@ export default function RoomDetailsPage({
       </div>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return rooms.map((room) => ({
+    id: room.id.toString(),
+  }));
 }
