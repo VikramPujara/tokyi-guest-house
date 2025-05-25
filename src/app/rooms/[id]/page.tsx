@@ -1,13 +1,21 @@
+// app/rooms/[id]/page.tsx
+
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import rooms from "@/data/room";
 import BannerSection from "@/app/components/BannerSection";
 
-export default function RoomDetailsPage({
+// ✅ CORRECT TYPE
+interface RoomDetailsPageProps {
+  params: {
+    id: string;
+  };
+}
+
+// ✅ Ensure the function is async (even if not using await)
+export default async function RoomDetailsPage({
   params,
-}: {
-  params: { id: string };
-}) {
+}: RoomDetailsPageProps) {
   const room = rooms.find((r) => r.id.toString() === params.id);
 
   if (!room) return notFound();
@@ -40,7 +48,8 @@ export default function RoomDetailsPage({
   );
 }
 
-export async function generateStaticParams() {
+// ✅ Correct return type for dynamic routes
+export async function generateStaticParams(): Promise<{ id: string }[]> {
   return rooms.map((room) => ({
     id: room.id.toString(),
   }));
