@@ -38,18 +38,18 @@ export default function AboutPage() {
           Tokyi Guest House Kathmandu includes 18 rooms and is merely 0.7 km
           from Room. Guests who stay at the guest house can park their car on
           site. This property in Boudhha, which is a pilgrimage destination for
-          Tibetans is within 10 minutes' drive of Pashupatinath Temple and a
+          Tibetans is within 10 minutes. drive of Pashupatinath Temple and a
           15-minute ride from such shopping venues as Kathmandu Durbar Square.
-          Pullahari Monastery is around 25 minutes' walk from the hotel and
+          Pullahari Monastery is around 25 minutes walk from the hotel and
           Tribhuvan airport is 10 km away. The area also includes natural sights
           like Garden of Dreams a 10-minute drive from the accommodation. There
           is Bhrikuti Chwok bus stop in proximity to Tokyi Guest House.
           Guestrooms offer a patio and a balcony, along with a sofa set for
-          guests' comfort. They have kitchen facilities, such as an electric
+          guests comfort. They have kitchen facilities, such as an electric
           kettle, a refrigerator, and kitchenware. Featuring a tub, a separate
           toilet, and a shower, the bathrooms also come with bath sheets and
           slippers. Asian cuisine is served at Asian Heritage Inn & Bistro that
-          lies 18 minutes' walk away.
+          lies 18 minutes walk away.
         </p>
       </section>
     </div>
