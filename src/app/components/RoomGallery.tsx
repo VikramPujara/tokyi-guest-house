@@ -220,9 +220,9 @@ const premiumRooms: Room[] = [
 //   );
 // }
 export default function RoomGallery() {
-  const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
+  // const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
   //const openGallery = (room: Room) => setSelectedRoom(room);
-  const closeGallery = () => setSelectedRoom(null);
+  // const closeGallery = () => setSelectedRoom(null);
   const router = useRouter();
   const openGallery = (room: Room) => {
     router.push(`/rooms/${room.id}`);

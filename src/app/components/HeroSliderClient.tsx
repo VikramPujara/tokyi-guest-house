@@ -1,7 +1,7 @@
 // app/components/HeroSliderClient.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const images = [
   "/img-tokyi-guest-house-kathmandu-12.jpg",

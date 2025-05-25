@@ -56,8 +56,8 @@ export default function BookingForm() {
       } else {
         setError("Failed to send booking request.");
       }
-    } catch (err) {
-      setError("Error sending request.");
+    } catch (err: any) {
+      setError("Error sending request: " + (err.message || String(err)));
     }
   };
 
