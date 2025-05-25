@@ -6,7 +6,7 @@ export default function contact() {
   return (
     <>
       <BannerSection
-        backgroundImage="/img-tokyi-guest-house-kathmandu-12.jpg"
+        backgroundImage="/img-tokyi-guest-house-kathmandu-25.webp"
         subTitle="GET IN TOUCH"
         title="Contact Us"
       />

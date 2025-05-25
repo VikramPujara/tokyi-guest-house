@@ -24,7 +24,10 @@ export default function Home() {
           We provide premium services with deluxe rooms, sea views, and gourmet
           dining.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <div
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
+          style={{ backgroundColor: "#f8f9fa" }}
+        >
           <div className="p-4 shadow rounded bg-white">
             <h4 className="font-bold">Luxury Rooms</h4>
             <p>Enjoy your stay in comfort and elegance.</p>

@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-8 px-4 text-center">
+    <footer className="bg-[#1b1b1b] py-2 shadow-md text-white py-8 px-4 text-center">
       <p>&copy; 2025 Tokyi Guest House. All rights reserved.</p>
       <div className="mt-4 space-x-4">
         <a href="#privacy" className="hover:underline">

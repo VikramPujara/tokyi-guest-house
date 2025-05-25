@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const images = [
   "/img-tokyi-guest-house-kathmandu-12.jpg",
-  "/img-tokyi-guest-house-kathmandu-18.jpg",
+  "/img-tokyi-guest-house-kathmandu-25.webp",
   "/img-tokyi-guest-house-kathmandu-19.jpg",
-  "/img-tokyi-guest-house-kathmandu-23.jpg",
+  "/img-tokyi-guest-house-kathmandu-26.webp",
 ];
 
 const HeroSection = () => {
