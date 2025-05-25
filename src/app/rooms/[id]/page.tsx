@@ -5,11 +5,11 @@ import Image from "next/image";
 import rooms from "@/data/room"; // Adjust the path to your room data
 import BannerSection from "@/app/components/BannerSection";
 
-type Props = {
+type RoomDetailsPageProps = {
   params: { id: string };
 };
 
-export default function RoomDetailsPage({ params }: Props) {
+export default function RoomDetailsPage({ params }: RoomDetailsPageProps) {
   const room = rooms.find((r) => r.id.toString() === params.id);
 
   if (!room) return notFound();
