@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import TopHeader from "./TopHeader";
-import AboutPage from "../about/page";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);

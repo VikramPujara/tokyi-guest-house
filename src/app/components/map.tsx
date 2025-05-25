@@ -1,12 +1,8 @@
 "use client";
 
-// import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
-// import { useEffect } from "react";
-// import { Delete } from "lucide-react";
-
 //fix missing marker icon issue
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 

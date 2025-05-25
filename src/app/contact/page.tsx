@@ -1,20 +1,8 @@
 "use client";
-import { useState } from "react";
 
 import BannerSection from "../components/BannerSection";
-import BookingForm from "../components/BookingForm";
 
 export default function contact() {
-  const [error, setError] = useState("");
-  const [success, setSuccess] = useState("");
-
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phnumber: "",
-    subject: "",
-    message: "",
-  });
   return (
     <>
       <BannerSection
