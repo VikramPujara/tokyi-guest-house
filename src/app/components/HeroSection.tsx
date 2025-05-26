@@ -61,7 +61,8 @@ const HeroSection = () => {
 
       {/* Overlay Text + Button */}
       <div className="absolute inset-0 bg-black/40 flex flex-col justify-start items-center text-white text-center z-10 px-4 pt-32">
-        <h2 className="text-4xl font-bold">Tokyi Guest House</h2>
+        <h2 className="text-4xl font-bold">TOKYI</h2>
+        <h5 className="text-4xl font-bold">GUEST HOUSE & RESTAURANT</h5>
         <p className="mt-4 text-lg">Your comfort is our priority</p>
       </div>
 

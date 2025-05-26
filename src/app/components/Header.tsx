@@ -166,14 +166,14 @@ const Header = () => {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#1b1b1b] shadow-md py-2" : "bg-transparent py-4"
+        scrolled ? "bg-[#D4AF37] shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" onClick={handleLinkClick}>
           <Image
-            src="/logo2-removebg-preview.png"
+            src="/tokyijustlogo.png"
             alt="Logo"
             width={scrolled ? 80 : 100}
             height={scrolled ? 80 : 100}
@@ -237,7 +237,7 @@ const Header = () => {
                 <path d="M3 5h2l3.5 7-1.5 2.5a17.928 17.928 0 008.5 8.5L14 18.5 21 22v-2c0-9.94-8.06-18-18-18z" />
               </svg>
             </div>
-            <span className="text-sm font-semibold">+1 234 567 890</span>
+            <span className="text-sm font-semibold">01-5178282</span>
           </div>
 
           <Link
