@@ -50,17 +50,25 @@ export default function Home() {
             <li className="mb-2 text-gray-400">
               Double badroom with attached bathroom.
             </li>
+            <li className="mb-2 text-gray-400">
+              Twin bedroom with common bathroom.
+            </li>
+            <li className="mb-2 text-gray-400">
+              Service Apartment with attached bathroom and fully equipped
+              kitchen{" "}
+              <Link
+                href="/about"
+                className="text-black px-6 py-2 rounded-md font-medium transition"
+              >
+                more..
+              </Link>
+            </li>
 
             <div className="flex flex-col sm:flex-row gap-4">
               {/* <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md font-medium transition">
                 About Hotel
               </button> */}
-              <Link
-                href="/about"
-                className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md font-medium transition"
-              >
-                About Hotel
-              </Link>
+
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center border border-white rounded-full">
                   <svg
@@ -78,7 +86,6 @@ export default function Home() {
                     />
                   </svg>
                 </div>
-                <span className="text-lg">+01-5178282</span>
               </div>
             </div>
           </div>
@@ -95,7 +102,12 @@ export default function Home() {
               className="rounded-lg shadow-lg"
             />
             <img
-              src="/img-tokyi-guest-house-kathmandu-25.webp" // Replace with actual path
+              src="/IMG_3717.jpeg" // Replace with actual path
+              alt="Sandal by Pool"
+              className="rounded-lg shadow-lg"
+            />
+            <img
+              src="/IMG_Toyie_House_Garden1.jpeg" // Replace with actual path
               alt="Sandal by Pool"
               className="rounded-lg shadow-lg"
             />
@@ -143,7 +155,7 @@ export default function Home() {
         </div>
       </section>
       {/* 4. Amenities */}
-      <section className="py-16 bg-white text-center px-4">
+      {/* <section className="py-16 bg-white text-center px-4">
         <h2 className="text-3xl font-semibold mb-10">Amenities</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           <div>
@@ -167,7 +179,7 @@ export default function Home() {
             <p>Fine Dining</p>
           </div>
         </div>
-      </section>
+      </section> */}
       <div className="py-12">
         <section className="py-16 bg-white text-center px-4">
           <h2 className="text-3xl font-semibold mb-6">Find Us</h2>

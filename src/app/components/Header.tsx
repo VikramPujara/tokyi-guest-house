@@ -1,155 +1,14 @@
-// "use client";
-// import { useEffect, useState } from "react";
-// import Link from "next/link";
-// import { Menu, X } from "lucide-react";
-// import Image from "next/image";
-// import TopHeader from "./TopHeader";
-
-// export default function Header() {
-//   const [mobileOpen, setMobileOpen] = useState(false);
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 50);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   const toggleMenu = () => setMobileOpen(!mobileOpen);
-
-//   return (
-//     <>
-//       <header
-//         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-//           scrolled ? "bg-[#1b1b1b] py-2 shadow-md" : "bg-transparent py-4"
-//         }`}
-//       >
-//         <TopHeader />
-//         <div className="max-w-7xl mx-auto px-4 flex justify-between items-center transition-all duration-300">
-//           {/* Logo */}
-//           <Link href="/Home" className="text-2xl font-bold text-white">
-//             <Image
-//               src="/logo2-removebg-preview.png"
-//               alt="Tokyi Guest House Logo"
-//               width={100}
-//               height={100}
-//               className={`${
-//                 scrolled ? "w-[70px]" : "w-[100px]"
-//               } transition-all duration-300 mt-4`}
-//             />
-//             {/* <span className="text-xl font-bold text-white">HotelEase</span> */}
-//           </Link>
-
-//           {/* Desktop Menu */}
-//           <nav className="hidden md:flex items-center space-x-4 text-white">
-//             <Link href="/" className="hover:text-yellow-300">
-//               Home
-//             </Link>
-//             <Link href="/about" className="hover:text-yellow-300">
-//               About
-//             </Link>
-
-//             {/* Dropdown Menu */}
-//             <div className="relative group">
-//               <button className="hover:text-yellow-300">Rooms</button>
-//               <div className="absolute left-0 mt-2 hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-md overflow-hidden z-20 min-w-[160px]">
-//                 <Link
-//                   href="/rooms/luxury"
-//                   className="block px-4 py-2 hover:bg-gray-100"
-//                 >
-//                   Luxury Rooms
-//                 </Link>
-//                 <Link
-//                   href="/rooms/deluxe"
-//                   className="block px-4 py-2 hover:bg-gray-100"
-//                 >
-//                   Deluxe Rooms
-//                 </Link>
-//                 <Link
-//                   href="/rooms/family"
-//                   className="block px-4 py-2 hover:bg-gray-100"
-//                 >
-//                   Family Suites
-//                 </Link>
-//               </div>
-//             </div>
-
-//             <Link href="/services" className="hover:text-yellow-300">
-//               Services
-//             </Link>
-//             <Link href="/contact" className="hover:text-yellow-300">
-//               Contact
-//             </Link>
-//           </nav>
-
-//           {/* Mobile Toggle */}
-//           <button onClick={toggleMenu} className="md:hidden text-white">
-//             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
-//           </button>
-//         </div>
-
-//         {/* Mobile Menu */}
-//         {mobileOpen && (
-//           <div className="md:hidden bg-[#0e3f63] text-white border-t border-white/20">
-//             <Link href="/" className="block px-4 py-2 hover:bg-[#174a6e]">
-//               Home
-//             </Link>
-//             <Link href="/about" className="block px-4 py-2 hover:bg-[#174a6e]">
-//               About
-//             </Link>
-
-//             <div className="border-t px-4 py-2">
-//               <p className="font-semibold">Rooms</p>
-//               <Link
-//                 href="/rooms/luxury"
-//                 className="block px-4 py-1 text-sm hover:text-yellow-300"
-//               >
-//                 Luxury Rooms
-//               </Link>
-//               <Link
-//                 href="/rooms/deluxe"
-//                 className="block px-4 py-1 text-sm hover:text-yellow-300"
-//               >
-//                 Deluxe Rooms
-//               </Link>
-//               <Link
-//                 href="/rooms/family"
-//                 className="block px-4 py-1 text-sm hover:text-yellow-300"
-//               >
-//                 Family Suites
-//               </Link>
-//             </div>
-
-//             <Link
-//               href="/services"
-//               className="block px-4 py-2 hover:bg-[#174a6e]"
-//             >
-//               Services
-//             </Link>
-//             <Link
-//               href="/contact"
-//               className="block px-4 py-2 hover:bg-[#174a6e]"
-//             >
-//               Contact
-//             </Link>
-//           </div>
-//         )}
-//       </header>
-//     </>
-//   );
-// }
-
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [opendrop, setopendrop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -163,17 +22,21 @@ const Header = () => {
     setMenuOpen(false);
   };
 
+  const isRoomPage =
+    pathname.includes("/roomtype") || pathname.includes("/rooms");
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#D4AF37] shadow-md py-2" : "bg-transparent py-4"
+        scrolled || isRoomPage
+          ? "bg-[#D4AF37] shadow-md py-2"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" onClick={handleLinkClick}>
           <Image
-            src="/tokyijustlogo.png"
+            src="/tokyilogo.png"
             alt="Logo"
             width={scrolled ? 80 : 100}
             height={scrolled ? 80 : 100}
@@ -189,30 +52,77 @@ const Header = () => {
           <Link href="/about" className="hover:text-yellow-500 transition">
             About
           </Link>
-
-          {/* Dropdown */}
-          <div className="relative group">
-            <button className="hover:text-yellow-500 transition">ROOMS</button>
-            <div className="absolute top-full left-0 mt-2 hidden group-hover:block bg-white text-gray-800 shadow-lg rounded-md overflow-hidden z-20 min-w-[180px]">
-              <Link
-                href="/rooms/luxury"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Luxury Rooms
-              </Link>
-              <Link
-                href="/rooms/deluxe"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Deluxe Rooms
-              </Link>
-              <Link
-                href="/rooms/family"
-                className="block px-4 py-2 hover:bg-gray-100"
-              >
-                Family Suites
-              </Link>
+          <div className="relative group inline-block z-50">
+            <div className="hover:text-yellow-500 transition cursor-pointer">
+              ROOMS
             </div>
+
+            {/* Dropdown - no margin here */}
+            <div className="absolute left-0 top-full group-hover:block hidden bg-white text-gray-800 shadow-lg rounded-md min-w-[380px] z-50">
+              <a
+                href="/roomtype?type=Single"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Twin room with attached bathroom
+              </a>
+              <a
+                href="/roomtype?type=Double"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Double bedroom with attached bathroom
+              </a>
+              <a
+                href="/roomtype?type=Family"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Twin bedroom with common bathroom
+              </a>
+              <a
+                href="/roomtype?type=Service-apartment"
+                className="block px-4 py-2 hover:bg-gray-100"
+              >
+                Service apartment with with attached bathroom and fully equipped
+                kitchen
+              </a>
+            </div>
+          </div>
+
+          <div className="md:hidden">
+            <button
+              className="w-full text-left px-4 py-2 font-semibold text-white"
+              onClick={() => setopendrop(!opendrop)}
+            >
+              Rooms
+            </button>
+            {opendrop && (
+              <div className="pl-6">
+                <Link
+                  href="/roomtype?type=Single"
+                  className="block py-1 text-sm text-white"
+                >
+                  Twin room with attached bathroom
+                </Link>
+                <Link
+                  href="/roomtype?type=Double"
+                  className="block py-1 text-sm text-white"
+                >
+                  Double bedroom with attached bathroom
+                </Link>
+                <Link
+                  href="/roomtype?type=Family"
+                  className="block py-1 text-sm text-white"
+                >
+                  Twin bedroom with common bathroom
+                </Link>
+                <Link
+                  href="/roomtype?type=Service-apartment"
+                  className="block py-1 text-sm text-white"
+                >
+                  Service apartment with with attached bathroom and fully
+                  equipped kitchen
+                </Link>
+              </div>
+            )}
           </div>
 
           <Link href="/services" className="hover:text-yellow-500 transition">
@@ -300,25 +210,33 @@ const Header = () => {
             <div className="font-semibold">Rooms</div>
             <div className="ml-4 mt-2 space-y-1 text-sm">
               <Link
-                href="/rooms/luxury"
+                href="/roomtype?type=single"
                 onClick={handleLinkClick}
                 className="block hover:text-yellow-400"
               >
-                Luxury Rooms
+                Twin room with attached bathroom
               </Link>
               <Link
-                href="/rooms/deluxe"
+                href="/roomtype?type=double"
                 onClick={handleLinkClick}
                 className="block hover:text-yellow-400"
               >
-                Deluxe Rooms
+                Double bedroom with attached bathroom
               </Link>
               <Link
-                href="/rooms/family"
+                href="/roomtype?type=family"
                 onClick={handleLinkClick}
                 className="block hover:text-yellow-400"
               >
-                Family Suites
+                Twin bedroom with common bathroom
+              </Link>
+              <Link
+                href="/roomtype?type=Service-apartment"
+                onClick={handleLinkClick}
+                className="block hover:text-yellow-400"
+              >
+                Service apartment with with attached bathroom and fully equipped
+                kitchen
               </Link>
             </div>
           </div>

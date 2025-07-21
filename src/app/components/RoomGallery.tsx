@@ -219,9 +219,6 @@ const premiumRooms: Room[] = [
 //   );
 // }
 export default function RoomGallery() {
-  // const [selectedRoom, setSelectedRoom] = useState<Room | null>(null);
-  //const openGallery = (room: Room) => setSelectedRoom(room);
-  // const closeGallery = () => setSelectedRoom(null);
   const router = useRouter();
   const openGallery = (room: Room) => {
     router.push(`/rooms/${room.id}`);
@@ -230,7 +227,7 @@ export default function RoomGallery() {
   return (
     <section className="py-16 bg-gray-100 px-4">
       <h2 className="text-3xl font-bold mb-6 text-center text-[#0e3f63]">
-        Our Premium Rooms
+        Gallery
       </h2>
       <Swiper
         modules={[Navigation, Autoplay]}
