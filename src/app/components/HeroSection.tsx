@@ -63,7 +63,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-black/40 flex flex-col justify-start items-center text-white text-center z-10 px-4 pt-32">
         <h2 className="text-4xl">TOKYI</h2>
         <h5 className="text-4xl">GUEST HOUSE & RESTAURANT</h5>
-        <p className="mt-4 text-lg">"Comfortable & Happy"</p>
+        <p className="mt-4 text-lg">&quot;Comfortable &amp; Happy&quot;</p>
       </div>
 
       <button

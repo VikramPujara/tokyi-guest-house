@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="relative bg-[#D4AF37] text-white py-8 px-6 shadow-md">
@@ -36,7 +37,7 @@ const Footer = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img
+          <Image
             src="/tripadvisor.png"
             alt="Tripadvisor"
             className="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
