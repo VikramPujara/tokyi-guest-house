@@ -4,10 +4,10 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 
 const images = [
-  "/rooms/gardeen/10.JPG",
-  "/rooms/gardeen/3.PNG",
-  "/rooms/kitchen/3.JPG",
-  "/rooms/kitchen/2.JPG",
+  "/rooms/gardeen/10.jpg",
+  "/rooms/gardeen/3.png",
+  "/rooms/kitchen/3.png",
+  "/rooms/kitchen/2.jpg",
 ];
 
 const HeroSection = () => {

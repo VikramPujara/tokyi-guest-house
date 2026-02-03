@@ -106,17 +106,17 @@ export default function Home() {
               className="rounded-lg shadow-lg"
             />
             <img
-              src="/yogaroom-1.JPG"
+              src="/yogaroom-1.jpg"
               alt="Yoga Room"
               className="rounded-lg shadow-lg"
             />
             <img
-              src="/ground-2.JPG"
+              src="/ground-2.jpg"
               alt="GROUND"
               className="rounded-lg shadow-lg"
             />
             <img
-              src="/ground-1.JPG"
+              src="/ground-1.jpg"
               alt="Ground"
               className="rounded-lg shadow-lg"
             />
