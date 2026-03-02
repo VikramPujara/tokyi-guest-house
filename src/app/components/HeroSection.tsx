@@ -6,7 +6,7 @@ import Image from "next/image";
 const images = [
   "/rooms/gardeen/10.jpg",
   "/rooms/gardeen/3.png",
-  "/rooms/kitchen/3.png",
+  "/rooms/kitchen/3.jpg",
   "/rooms/kitchen/2.jpg",
 ];
 

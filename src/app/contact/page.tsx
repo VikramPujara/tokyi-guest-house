@@ -48,7 +48,7 @@ export default function Contact() {
     return true;
   };
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -132,7 +132,7 @@ export default function Contact() {
           loading="lazy"
           allowFullScreen
           referrerPolicy="no-referrer-when-downgrade"
-          src={`https://www.google.com/maps?q=27.7172,85.324&hl=es;z=14&output=embed`}
+          src={`https://www.google.com/maps?q=27.726675,85.361197&hl=es;z=14&output=embed`}
         ></iframe>
       </div>
     </>

@@ -21,6 +21,9 @@ const Footer = () => {
           <p className="flex items-center gap-2">
             <span>📞 01-5178282</span>
           </p>
+          <p className="flex items-center gap-2">
+            <span>Whatsapp: +977 9851133344</span>
+          </p>
         </div>
 
         {/* Right Side: Tripadvisor Logo */}

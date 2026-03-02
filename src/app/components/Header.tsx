@@ -7,7 +7,6 @@ import { usePathname } from "next/navigation";
 const Header = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
-  // const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [roomsOpen, setRoomsOpen] = useState(false);
   const [serviceOpen, setServiceOpen] = useState(false);
@@ -142,7 +141,7 @@ const Header = () => {
             <span className="text-sm font-semibold">01-5178282</span>
           </div>
           <Link
-            href="/booking"
+            href="/contact"
             className="bg-yellow-500 text-black font-semibold px-4 py-2 rounded-full hover:bg-yellow-400 transition"
           >
             Book Now

@@ -36,7 +36,7 @@ export async function POST(req: Request) {
       subject: "✅ We received your message - Tokyo House",
       html: `
         <p>Dear ${name},</p>
-        <p>Thank you for contacting <strong>Tokyo House</strong>!</p>
+        <p>Thank you for contacting <strong>Tokyo Guest House</strong>!</p>
         <p>We’ve received your message:</p>
         <blockquote>${message}</blockquote>
         <p>Our team will get back to you shortly.</p>

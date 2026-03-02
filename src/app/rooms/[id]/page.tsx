@@ -18,11 +18,7 @@ export default async function RoomDetailsPage({
 
   return (
     <>
-      <BannerSection
-        backgroundImage={room.thumbnail}
-        subTitle="A luxurious stay in the heart of Kathmandu"
-        title="About Tokyi Guest House"
-      />
+      <BannerSection backgroundImage={room.thumbnail} subTitle="" title="" />
       <div className="p-6 max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">{room.name}</h1>
         <p className="text-gray-600 mb-6">{room.description}</p>

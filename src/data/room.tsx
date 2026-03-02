@@ -90,7 +90,7 @@ export const premiumRooms: Room[] = [
     price: "",
     description: "",
     thumbnail: "/rooms/gardeen/11.jpg",
-    gallery: ["/rooms/gardeen/11.jpg", "/rooms/gardeen/reception.jpg"],
+    gallery: ["/rooms/gardeen/11.jpg"],
     type: "kitchen1",
   },
   {
@@ -111,9 +111,9 @@ export const premiumRooms: Room[] = [
   },
   {
     id: 2,
-    name: "Doble bed room with attached bathroom",
-    price: "$32/night",
-    description: "",
+    name: "Doble bad room with attached bathroom",
+    price: "$27/night",
+    description: "For Single person $27, for 2 perseon $32",
     thumbnail: "/rooms/doubleattachbath/Twin_Attach_6.png",
     gallery: [
       "/rooms/doubleattachbath/Twin_Attach_6.png",
@@ -128,10 +128,10 @@ export const premiumRooms: Room[] = [
     id: 3,
     name: "Twin room with common bathroom",
     price: "$21/night",
-    description: "",
+    description: "For Single person $21, for 2 perseon $25",
     thumbnail: "/rooms/twinwithcommonbath/twin-room-common_7.jpg",
     gallery: [
-      "/rooms/twinwithcommonbath/twin-room-common_4.jpeg",
+      "/rooms/twinwithcommonbath/twin-room-common_4.jpg",
       "/rooms/twinwithcommonbath/twin-room-common_5.jpg",
       "/rooms/twinwithcommonbath/twin-room-common_6.jpg",
       "/rooms/twinwithcommonbath/twin-room-common_7.jpg",
@@ -146,7 +146,7 @@ export const premiumRooms: Room[] = [
     name: "Lomanthang Apartment",
     price: "",
     description:
-      "Lomanthang 2 badroom apartment with garden view and elegant interior.",
+      "Two-badroom apartment featuring en-suite bathroom in both rooms, a fully equiped kitchen, and a private balcony overlooking garden area.",
     thumbnail: "/rooms/serviceapartment/lomanthang/9.jpg",
     gallery: [
       "/rooms/serviceapartment/lomanthang/9.jpg",
@@ -168,7 +168,8 @@ export const premiumRooms: Room[] = [
     id: 6,
     name: "Thengar Apartment",
     price: "",
-    description: "Spacious room with garden view and elegant interior.",
+    description:
+      "A bedroom with attached bathroom fully furnished kitchen and private balcony.",
     thumbnail: "/rooms/serviceapartment/thengar/111.jpg",
     gallery: [
       "/rooms/serviceapartment/thengar/111.jpg",
@@ -190,13 +191,15 @@ export const premiumRooms: Room[] = [
     id: 7,
     name: "Ghemi Apartment",
     price: "",
-    description: "Spacious room with garden view and elegant interior.",
-    thumbnail: "/rooms/serviceapartment/thengar/107.jpg",
+    description:
+      "Warm apartment bedroom with attached bathroom and fully furnished kitchen.",
+    thumbnail: "/rooms/serviceapartment/ghemi/IMG_4101.jpeg",
     gallery: [
-      "/rooms/tokyi-guest-house-kathmandu-pic-8.jpg",
-      "/rooms/serviceapartment/lomanthang/apartment_toilet.png",
-      "/rooms/serviceapartment/lomanthang/lomanthang_4.jpeg",
-      "/rooms/serviceapartment/lomanthang/lomanthang_5.jpeg",
+      "/rooms/serviceapartment/ghemi/IMG_2409.JPEG",
+      "/rooms/serviceapartment/ghemi/IMG_4101.JPEG",
+      "/rooms/serviceapartment/ghemi/IMG_2387.JPEG",
+      "/rooms/serviceapartment/ghemi/washroom.JPG",
+      "/rooms/serviceapartment/ghemi/IMG_5441.JPEG",
     ],
     type: "Ghemi",
   },

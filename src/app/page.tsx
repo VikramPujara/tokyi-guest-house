@@ -29,17 +29,19 @@ export default function Home() {
               {/* Welcome to the best <br /> hotel in kathmandu */}
             </h5>
             <p className="mb-4 text-gray-500">
-              Tokyi guest house,{" "}
+              Tokyi means,{" "}
               <span className="font-semibold text-black">
-                Mahankal is just 7 minuts
+                “Comfortable and Happy”
               </span>{" "}
-              walk from Boudhanath stupa.A 25 minut walk from Pashupatinath
-              Temple and only 5.8 km from Kathmandu Darbar Square.
+              in Tibetan. — and that is the feeling we wish to offer every
+              guest.
             </p>
             <p className="mb-6 text-gray-400">
-              <strong>Tokyi Guest House</strong> provide a peaceful environment
-              in the middle of the chaotic city of Kathmandu.You can enjoy
-              beautiful valley view of kapan,phulari, monostries and Himalayas.
+              Located in Mahankal, just a 7-minute walk from the sacred
+              Boudhanath Stupa, Tokyi Guest House is a peaceful retreat in the
+              heart of vibrant Kathmandu. Surrounded by valley views,
+              monasteries, and the distant Himalayas, we provide a calm and
+              welcoming space where you can relax, recharge, and feel at home.
             </p>
             <p>
               <strong>Room types:</strong>
@@ -166,7 +168,7 @@ export default function Home() {
       <div className="py-12">
         <section className="py-16 bg-white text-center px-4">
           <h2 className="text-3xl font-semibold mb-6">Find Us</h2>
-          <p className="mb-4">Thamel, Kathmandu, Nepal</p>
+          <p className="mb-4">Tokyi Guest House Kathmandu, Nepal</p>
           <Map />
         </section>
       </div>

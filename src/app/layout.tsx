@@ -16,7 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Tokyi Guest House",
-  description: "A luxury hotel experience",
+  description: "A luxary guest house",
+  icons: {
+    icon: "/tokyijustlogo.png",
+  },
 };
 
 export default function RootLayout({

@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     // Send email to hotel owner
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
-      to: "mr.pujarabikram@gmail.com",
+      to: "tokyihouse@gmail.com",
       subject: "New Booking Request Received",
       // text: `Booking Details:
       // Email: ${email}
@@ -40,10 +40,10 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: process.env.GMAIL_USER,
       to: email,
-      subject: "Booking Requuest Received- Tokyo Guest House",
+      subject: "Booking Requuest Received- Tokyi Guest House",
       // text: `Dear Guest, we have received your booking from ${checkin} to ${checkout}. Thank you!`,
       html: `<p>Dear Guest,</p>
-       <p>Thank you for choosing <strong>Tokyo House</strong>!</p>
+       <p>Thank you for choosing <strong>Tokyi Guest House</strong>!</p>
        <p>We have received your booking request for the following dates:</p>
        <ul>
            <li><strong>Check-in:</strong> ${checkin}</li>
@@ -53,7 +53,7 @@ export async function POST(req: Request) {
           <li><strong>Children:</strong> ${child}</li>
        </ul> 
        <p>Our team will reply to you soon with confirmation or availability details.</p>
-       <p>Best regards,<br/>Tokyo Guest House Team</p>
+       <p>Best regards,<br/>Tokyi Guest House Team</p>
       `,
     });
 
