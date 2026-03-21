@@ -41,35 +41,55 @@ export default function Home() {
               Boudhanath Stupa, Tokyi Guest House is a peaceful retreat in the
               heart of vibrant Kathmandu. Surrounded by valley views,
               monasteries, and the distant Himalayas, we provide a calm and
-              welcoming space where you can relax, recharge, and feel at home.
-            </p>
-            <p>
-              <strong>Room types:</strong>
-            </p>
-            <li className="mb-2 text-gray-400">
-              Twin bedroom with attached bathroom.
-            </li>
-            <li className="mb-2 text-gray-400">
-              Double badroom with attached bathroom.
-            </li>
-            <li className="mb-2 text-gray-400">
-              Twin bedroom with common bathroom.
-            </li>
-            <li className="mb-2 text-gray-400">
-              Service Apartment with attached bathroom and fully equipped
-              kitchen{""}
+              welcoming space where you can relax, recharge, and feel at home
               <Link
                 href="/about"
                 className="text-black px-3 py-1 rounded-md font-medium transition"
               >
                 more..
               </Link>
-            </li>
-            <div className="flex flex-col sm:flex-row gap-4">
-              {/* <button className="bg-yellow-500 hover:bg-yellow-600 text-black px-6 py-2 rounded-md font-medium transition">
-                About Hotel
-              </button> */}
+            </p>
 
+            <p>
+              <strong>Room types:</strong>
+            </p>
+            <p className="mb-2">
+              <Link href="/rooms/1" className="px-3 py-1 mb-6 text-gray-400">
+                Twin bedroom with attached bathroom.
+              </Link>
+            </p>
+            <p className="mb-2 text-gray-400">
+              <Link href="/rooms/2" className="px-3 py-1 mb-6 text-gray-400">
+                Double bedroom with attached bathroom.
+              </Link>
+            </p>
+            <p className="mb-2 text-gray-400">
+              <Link href="/rooms/3" className="px-3 py-1 mb-6 text-gray-400">
+                Twin bedroom with common bathroom.
+              </Link>
+            </p>
+            <p>
+              <strong>
+                Service Apartment with attached bathroom and fully equipped
+                kitchen{""}
+              </strong>
+            </p>
+            <p>
+              <Link href="/rooms/5" className="px-3 py-1 mb-6 text-gray-400">
+                Lomanthang Apartment
+              </Link>
+            </p>
+            <p>
+              <Link href="/rooms/6" className=" px-3 py-1mb-6 text-gray-400">
+                Thengar Apartment
+              </Link>
+            </p>
+            <p>
+              <Link href="/rooms/7" className="px-3 py-1 mb-6 text-gray-400">
+                Ghemi Apartment
+              </Link>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 flex items-center justify-center border border-white rounded-full">
                   <svg
